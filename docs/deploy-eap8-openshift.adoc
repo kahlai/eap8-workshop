@@ -203,6 +203,8 @@ build:
  env:
    - name: POSTGRESQL_DRIVER_VERSION
      value: '42.6.0'
+   - name: MAVEN_MIRROR_URL
+      value: http://nexus.lab-infra.svc.cluster.local:8081/repository/maven-all-public/
 deploy:
  enabled: false
 ----
