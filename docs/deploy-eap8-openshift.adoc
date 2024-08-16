@@ -197,14 +197,14 @@ image::helm-charts.png[migration,80%]
 [source,yaml,role="copypaste"]
 ----
 build:
- uri: 'http://gitea.gitea.svc.cluster.local:3000/{{ USER_ID }}/workshop.git'
+ uri: 'http://gitea.gitea.svc.cluster.local:3000/user1/workshop.git'
  ref: main
  contextDir: coolstore-eap8
  env:
    - name: POSTGRESQL_DRIVER_VERSION
      value: '42.6.0'
    - name: MAVEN_MIRROR_URL
-      value: http://nexus.lab-infra.svc.cluster.local:8081/repository/maven-all-public/
+     value: http://nexus.lab-infra.svc.cluster.local:8081/repository/maven-all-public/
 deploy:
  enabled: false
 ----
